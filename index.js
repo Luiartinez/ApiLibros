@@ -12,7 +12,7 @@ mongoose
   .connect(MONGODB_URI)
   .then(() => {
     console.log("✅ MongoDB conectado");
-    console.log(`� Base de datos: biblioteca`);
+    console.log("📚 Base de datos: biblioteca"); // CORREGIDO: Uso correcto de console.log
   })
   .catch(err => {
     console.error("❌ Error de conexión a MongoDB:", err.message);
@@ -20,5 +20,5 @@ mongoose
   });
 
 app.listen(PORT, () => {
-  console.log(`🚀 API ejecutándose en http://localhost:3000`);
+  console.log(`🚀 API ejecutándose en http://localhost:${PORT}`); // CORREGIDO: Template literal correcto
 });
